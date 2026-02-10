@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mapa Interactivo</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <main class="map-stage" aria-label="Mapa interactivo">
+    <!-- Fondo: el mapa -->
+    <img class="map-image" src="assets/Mapa.png" alt="Mapa" />
+
+    <!-- Overlay: zonas clicables (SVG encima del mapa) -->
+    <svg class="map-hotspots" viewBox="0 0 1000 600" preserveAspectRatio="xMidYMid slice">
+      <!-- Zona ejemplo 1 (polígono) -->
+      <circle class="hotspot" data-id="La_Chimenea" cx="760" cy="350" r="16" />
+
+      <circle class="hotspot" data-id="Ahuahuete" cx="840" cy="164" r="16"/> 
+
+      <!-- Zona ejemplo 2 (círculo) -->
+      <circle class="hotspot" data-id="Ojo_de_Agua" cx="808" cy="255" r="16" />
+
+      <circle class="hotspot" data-id="Salto" cx="745" cy="250" r="16"/>
+
+      <circle class="hotspot" data-id="Ex_hacienda" cx="671" cy="313" r="16"/>
+
+      <circle class="hotspot" data-id="Picacho" cx="580" cy="122" r="16" />
+
+      <circle class="hotspot" data-id="Mina_de_cobre" cx="120" cy="480" r="16" />
+
+    </svg>
+  </main>
+
+  <!-- Modal -->
+  <div class="modal-backdrop" id="backdrop" hidden></div>
+
+  <section class="modal" id="modal" role="dialog" aria-modal="true" aria-hidden="true" hidden>
+    <header class="modal-header">
+      <h2 id="modalTitle">Título</h2>
+      <button class="icon-btn" id="closeBtn" aria-label="Cerrar">✕</button>
+    </header>
+
+    <div class="modal-body">
+      <p id="modalText">Texto</p>
+    </div>
+  </section>
+
+  <script src="app.js"></script>
+</body>
+</html>
