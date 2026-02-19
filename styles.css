@@ -88,6 +88,7 @@ html, body { margin: 0; padding: 0; height: 100%; font-family: system-ui, Arial,
 }
 
 .modal-body p{
+  white-space: pre-line;
   margin: 10px 0 0;
   line-height: 1.5;
 }
