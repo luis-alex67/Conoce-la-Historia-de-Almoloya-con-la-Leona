@@ -28,7 +28,7 @@ const lugares = {
   Mina_de_cobre: {
     titulo:"Mina de cobre almoloya de alquisiras",
     texto:"Esta zona del Estado de México fue importante en la época colonial y posterior por la actividad minera y fundición de metales (incluyendo tanto oro, plata como cobre) que provenían de minas cercanas como las de Zacualpan, Sultepec y Temascaltepec. La fundición y procesamiento de esos minerales se hacía en lugares como La Chimenea en Almoloya de Alquisiras, donde se trabajaban metales extraídos de esas minas regionales. �Plaza Chimalhuacan",
-  },
+  }
 };
 
 constmodal = document.getElementById ("modal");
