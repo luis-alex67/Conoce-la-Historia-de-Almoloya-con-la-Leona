@@ -1,5 +1,5 @@
 * { box-sizing: border-box; }
-html, body { margin: 0; padding: 0; height: 100%; font-family: system-ui, Arial, sans-serif; }
+html, body { margin: 0; padding: 0; height: 100%; width:80%; font-family: system-ui, Arial, sans-serif; }
 
 .map-stage{
   position: relative;
@@ -52,11 +52,11 @@ html, body { margin: 0; padding: 0; height: 100%; font-family: system-ui, Arial,
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
-  width: min(560px, 92vw);
+  width: max(560px, 80vw);
   background: #fff;
   border-radius: 16px;
   padding: 16px 16px 18px;
-  z-index: 60;
+  z-index: 80;
   box-shadow: 0 20px 60px rgba(0,0,0,.35);
   opacity: 0;
   animation: popIn .22s ease forwards;

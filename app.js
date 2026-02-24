@@ -2,7 +2,7 @@
 const lugares = {     
   La_Chimenea: {
     titulo: "Plaza principal",
-    texto: "🏛️ ¿Qué es La Chimenea en Almoloya de Alquisiras. La Chimenea es un sitio histórico y vestigio de la actividad minera y de fundición que existió en el municipio de Almoloya de Alquisiras, en el Estado de México, México. 📍 ¿Dónde se encuentra? Se ubica en la comunidad de Agua Fría, dentro del municipio de Almoloya de Alquisiras, un lugar con historia minera relacionado con las minas de Zacualpan, Sultepec y Temascaltepec. 🧱 Características principales 📅 Época y construcciónSu construcción data de 1821, lo que la convierte en una estructura con casi dos siglos de historia. 🔧 Función originalNo es simplemente un conducto de humo común: era parte de una fundición de metales donde se procesaban minerales extraídos de las minas cercanas. Aquí se trabajaban metales como oro, plata y cobre antes de enviarlos a otros puntos de comercio, por ejemplo a San Juan de las Huertas. 👷 Historia humanaFueron mineros alemanes quienes impulsaron la construcción de esta fundición y la chimenea como parte del proceso industrial de la época. También se relaciona con la actividad de Pedro Ascencio Alquisiras, un insurgente importante en la historia local, quien trabajó en esta zona durante la época de la independencia. 📌 Valor históricoHoy en día La Chimenea es un símbolo histórico de la industria minera en la región, representando el pasado de la extracción y procesamiento de minerales en esta zona del Estado de México. 🗺️ Importancia turística y cultura Este sitio es parte del patrimonio que turistas e intérpretes de la historia local pueden visitar para comprender mejor cómo era la vida y la economía de la región en el siglo XIX, especialmente vinculada con la minería."
+    texto: "🏛️ ¿Qué es La Chimenea en Almoloya de Alquisiras. La Chimenea es un sitio histórico y vestigio de la actividad minera y de fundición que existió en el municipio de Almoloya de Alquisiras, en el Estado de México, México. 📍 ¿Dónde se encuentra? Se ubica en la comunidad de Agua Fría, dentro del municipio de Almoloya de Alquisiras, un lugar con historia minera relacionado con las minas de Zacualpan, Sultepec y Temascaltepec. 🧱 Características principales 📅 Época y construcciónSu construcción data de 1821, lo que la convierte en una estructura con casi dos siglos de historia. 🔧 Función originalNo es simplemente un conducto de humo común: era parte de una fundición de metales donde se procesaban minerales extraídos de las minas cercanas. Aquí se trabajaban metales como oro, plata y cobre antes de enviarlos a otros puntos de comercio, por ejemplo a San Juan de las Huertas. 👷 Historia humanaFueron mineros alemanes quienes impulsaron la construcción de esta fundición y la chimenea como parte del proceso industrial de la época. También se relaciona con la actividad de Pedro Ascencio Alquisiras, un insurgente importante en la historia local, quien trabajó en esta zona durante la época de la independencia. 📌 Valor históricoHoy en día La Chimenea es un símbolo histórico de la industria minera en la región, representando el pasado de la extracción y procesamiento de minerales en esta zona del Estado de México. 🗺️ Importancia turística y cultura Este sitio es parte del patrimonio que turistas e intérpretes de la historia local pueden visitar para comprender mejor cómo era la vida y la economía de la región en el siglo XIX, especialmente vinculada con la minería.",
   },
    Ahuahuete: {
     titulo: "Museo local",
@@ -15,7 +15,6 @@ const lugares = {
   salto: {
     titulo:"El salto almoloya de alquisiras",
     texto:"El Salto (en Almoloya de Alquisiras, Estado de México) 🌿El Salto es una cascada natural ubicada en el municipio de Almoloya de Alquisiras, en el sur del Estado de México (no en Morelos 🇲🇽).  📍 ¿Qué es?Es una cascada donde el agua cae desde unos 10 metros de altura, formando un entorno muy bonito dentro de un área natural conocida como Parque El Salto.  🌄 ¿Qué puedes hacer ahí?Disfrutar la naturaleza caminando, viendo la cascada y el paisaje.  ￼•	Organizar un día de campo o picnic, ya que el lugar suele contar con áreas de palapas y asadores. •	Relajarte o pasar el rato con amigos o familia en un ambiente tranquilo.  ￼ Datos adicionales•	El nombre Almoloya de Alquisiras viene del náhuatl y significa “lugar donde mana el agua”, lo que explica por qué hay tantos manantiales y corrientes en la zona"
-    
   },
   Ex_hacienda: {
     titulo:"Ex hacienda la colorada",
@@ -31,11 +30,11 @@ const lugares = {
   }
 };
 
-constmodal = document.getElementById ("modal");
-constbackdrop = document.getElementById("backdrop"),
-constcloseBtn = document.getElementById("closeBtn"),
-constmodalTitle = document.getElementById("modalTitle"),
-constmodalText = document.getElementById("modalText"),
+const modal = document.getElementById ("modal");
+const backdrop = document.getElementById("backdrop");
+const closeBtn = document.getElementById("closeBtn");
+const modalTitle = document.getElementById("modalTitle");
+const modalText = document.getElementById("modalText");
 
 function openModal(id){
   const lugar = lugares[id];
@@ -61,8 +60,8 @@ document.querySelectorAll(".hotspot").forEach(el => {
   el.addEventListener("click", () => {
     const id = el.dataset.id;
     openModal(id);
-  });
-});
+  })
+})
 
 // Cerrar
 closeBtn.addEventListener("click", closeModal);
@@ -73,4 +72,4 @@ window.addEventListener("keydown", (e) => {
   if(e.key === "Escape" && !modal.hidden){
     closeModal();
   }
-});
+})
